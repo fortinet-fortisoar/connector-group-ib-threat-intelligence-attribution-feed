@@ -3,6 +3,7 @@
   "label": "Group IB Threat Intelligence & Attribution Feed",
   "description": "Use Group-IB Threat Intelligence & Attribution Feed integration to fetch IOCs from various Group-IB collections.",
   "publisher": "Community",
+  "contributor":"Naili.M",
   "cs_approved": false,
   "cs_compatible": true,
   "version": "1.1.0",
