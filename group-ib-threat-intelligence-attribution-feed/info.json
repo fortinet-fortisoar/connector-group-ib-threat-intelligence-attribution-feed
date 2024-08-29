@@ -1,0 +1,164 @@
+{
+  "name": "group-ib-threat-intelligence-attribution-feed",
+  "label": "Group IB Threat Intelligence & Attribution Feed",
+  "description": "Use Group-IB Threat Intelligence & Attribution Feed integration to fetch IOCs from various Group-IB collections.",
+  "publisher": "Community",
+  "contributor":"Naili.M",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "version": "1.1.0",
+  "category": "Investigation",
+  "icon_small_name": "Group_IB_Threat_Intelligence_small.png",
+  "icon_large_name": "Group_IB_Threat_Intelligence_large.png",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.1.0/group-ib-threat-intelligence-attribution-feed/209/group-ib-threat-intelligence-amp-attribution-feed-v1.1.0",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "name": "server_url",
+        "description": "URL of the Group IB server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "Username",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "name": "username",
+        "description": "Username used to access the Group IB server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "Password",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "password",
+        "name": "password",
+        "description": "Password used to access the Group IB server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "Verify SSL",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "type": "checkbox",
+        "name": "verify_ssl",
+        "value": true,
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not. By default, this option is set as True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "search_indicator",
+      "title": "Search Indicator",
+      "description": "Find indicator and its metadata on Group IB Database.",
+      "category": "investigation",
+      "annotation": "search_indicator",
+      "output_schema": {},
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Indicator",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "q",
+          "value": "",
+          "placeholder":"milw0rm.com",
+          "tooltip": "Value of the indicator to search for in GroupIB DB.",
+          "description": "Value of the indicator to search for in GroupIB DB"
+        },
+        {
+          "title": "Limit",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "integer",
+          "name": "limit",
+          "value": 5,
+          "tooltip": "Limit how many records to return per match.",
+          "description": "Limit how many records to return per match."
+        }
+      ]
+    },
+    {
+      "operation": "get_indicators",
+      "title": "Get Indicators",
+      "description": "Retrieves a limited number of indicators for the specified Group IB collection, and all indicators for a particular incident if you have specified the incident ID.",
+      "category": "investigation",
+      "annotation": "get_indicators",
+      "output_schema": {
+        "value": "",
+        "type": "",
+        "asn": "",
+        "geocountry": "",
+        "gibmalwarename": ""
+      },
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Collection",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            "compromised/mule",
+            "compromised/imei",
+            "attacks/ddos",
+            "attacks/deface",
+            "attacks/phishing",
+            "attacks/phishing_kit",
+            "hi/threat",
+            "apt/threat",
+            "osi/vulnerability",
+            "suspicious_ip/tor_node",
+            "suspicious_ip/open_proxy",
+            "suspicious_ip/socks_proxy",
+            "malware/cnc"
+          ],
+          "name": "collection",
+          "value": "",
+          "tooltip": "GIB Collection to get indicators from.",
+          "description": "The Group IB Collection from which you want to retrieve indicators. You can choose from the following options: compromised/mule, compromised/imei, attacks/ddos, attacks/deface, attacks/phishing, attacks/phishing_kit, hi/threat, apt/threat, osi/vulnerability, suspicious_ip/tor_node, suspicious_ip/open_proxy, suspicious_ip/socks_proxy, or malware/cnc."
+        },
+        {
+          "title": "Incident ID",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "id",
+          "value": "",
+          "tooltip": "Incident Id to get indicators.",
+          "description": "The incident ID whose associated indicators you want to retrieve from Group IB."
+        },
+        {
+          "title": "Limit",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "name": "limit",
+          "value": 50,
+          "tooltip": "Limit of indicators to display in War Room",
+          "description": "The maximum number of indicators that you want to display in the War Room. You can specify the following values: 10, 20, 30, 40, or 50. By default, the limit is set to 50."
+        }
+      ]
+    }
+
+  ]
+}
