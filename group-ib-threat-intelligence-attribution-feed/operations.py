@@ -1,8 +1,9 @@
-""" Copyright start
-  Copyright (C) 2008 - 2021 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end """
+"""
+Copyright start
+MIT License
+Copyright (c) 2024   Fortinet Inc
+Copyright end
+"""
 
 import requests
 import logging
@@ -13,7 +14,7 @@ from connectors.core.connector import get_logger, ConnectorError
 from .constants import *
 
 logger = get_logger('group-ib-threat-intelligence-attribution-feed')
-#logger.setLevel(logging.DEBUG)
+
 
 class GroupIB():
     def __init__(self, config):
