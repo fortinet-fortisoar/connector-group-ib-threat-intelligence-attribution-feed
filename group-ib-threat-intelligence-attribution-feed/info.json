@@ -10,7 +10,7 @@
   "category": "Investigation",
   "icon_small_name": "Group_IB_Threat_Intelligence_small.png",
   "icon_large_name": "Group_IB_Threat_Intelligence_large.png",
-  "help_online": "https://docs.fortinet.com/document/fortisoar/1.1.0/group-ib-threat-intelligence-attribution-feed/209/group-ib-threat-intelligence-amp-attribution-feed-v1.1.0",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-group-ib-threat-intelligence-attribution-feed/blob/release/1.0.0/docs/GroupIb-TIA-Feed.md",
   "configuration": {
     "fields": [
       {
