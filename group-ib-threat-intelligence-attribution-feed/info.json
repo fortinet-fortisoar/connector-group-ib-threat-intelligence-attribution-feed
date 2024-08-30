@@ -2,7 +2,7 @@
   "name": "group-ib-threat-intelligence-attribution-feed",
   "label": "Group IB Threat Intelligence & Attribution Feed",
   "description": "Use Group-IB Threat Intelligence & Attribution Feed integration to fetch IOCs from various Group-IB collections.",
-  "publisher": "Community",
+  "publisher": "Fortinet CSE",
   "contributor":"Naili.M",
   "cs_approved": false,
   "cs_compatible": true,
@@ -72,7 +72,7 @@
           "value": "",
           "placeholder":"milw0rm.com",
           "tooltip": "Value of the indicator to search for in GroupIB DB.",
-          "description": "Value of the indicator to search for in GroupIB DB"
+          "description": "Value of the indicator to search for in GroupIB DB."
         },
         {
           "title": "Limit",
