@@ -10,6 +10,8 @@
 
 <p>Authored By: Fortinet CSE</p>
 
+Contributors: Naili.M
+
 <p>Certified: No</p>
 
 <h2>Installing the connector</h2>
@@ -162,9 +164,6 @@ If <code>vars.scores.green</code> == <code>0</code> and <code>vars.scores.red</c
 				<li>Suspicious</li>
 				<li>Good</li>
 			</ul>
-<p>The following image displays a sample of the populated <em>Description</em> field in a FortiSOAR indicator record:</p>
-			<img src="https://filestore.fortinet.com/pmdb/wiki/live/fortisoar_wiki/9fca419c31f52ba148995631df3a4c50.png" style="height:216px; width:650px"></td>
-		</tr>
 
 </tbody>
 </table>
