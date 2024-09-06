@@ -164,6 +164,11 @@ If <code>vars.scores.green</code> == <code>0</code> and <code>vars.scores.red</c
 				<li>Suspicious</li>
 				<li>Good</li>
 			</ul>
+<p>The following image displays a sample of the populated Description field in a FortiSOAR indicator record:</p>
+
+![Summary](./images/enrichment_summary.png)
+
+
 
 </tbody>
 </table>
