@@ -3,7 +3,7 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Group IB Threat Intelligence & Attribution Feed - 1.1.0",
+      "name": "Sample - Group IB Threat Intelligence & Attribution Feed - 1.2.0",
       "description": "Sample playbooks for \"Group IB Threat Intelligence & Attribution Feed\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "uuid": "aab30456-d319-44a3-af1e-07f877647c7d",
@@ -68,7 +68,7 @@
                   "limit": 50,
                   "collection": "attacks/ddos"
                 },
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "connector": "group-ib-threat-intelligence-attribution-feed",
                 "operation": "get_indicators",
                 "operationTitle": "Get Indicators",
@@ -164,7 +164,7 @@
                   "q": "1.1.1.1",
                   "limit": 5
                 },
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "connector": "group-ib-threat-intelligence-attribution-feed",
                 "operation": "search_indicator",
                 "operationTitle": "Search Indicator",
@@ -301,7 +301,7 @@
                   "q": "{{vars.indicator_value}}",
                   "limit": 5
                 },
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "connector": "group-ib-threat-intelligence-attribution-feed",
                 "operation": "search_indicator",
                 "operationTitle": "Search Indicator",

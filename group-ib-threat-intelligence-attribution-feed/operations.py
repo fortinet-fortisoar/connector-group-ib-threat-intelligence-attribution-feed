@@ -1,7 +1,7 @@
 """
 Copyright start
 MIT License
-Copyright (c) 2024   Fortinet Inc
+Copyright (c) 2025   Fortinet Inc
 Copyright end
 """
 
@@ -24,7 +24,7 @@ class GroupIB():
         else:
             self.server_url = 'https://{0}'.format(self.server_url.strip('/')) + '/api/v2/'
         self.username = config.get('username')
-        self.password = config.get('password')
+        self.api_key = config.get('api_key')
         self.verify_ssl = config.get('verify_ssl')
 
     def make_api_call(self, method='GET', endpoint=None, params=None, data=None,
@@ -37,7 +37,7 @@ class GroupIB():
         logger.info('Request URL {0}'.format(url))
         headers = {"Accept": "application/json", "Content-Type": "application/json"}
         try:
-            response = requests.request(method=method, url=url, auth=(self.username, self.password), params=params,
+            response = requests.request(method=method, url=url, auth=(self.username, self.api_key), params=params,
                                         data=data, json=json,
                                         headers=headers,
                                         verify=self.verify_ssl)
