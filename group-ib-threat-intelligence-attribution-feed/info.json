@@ -6,11 +6,11 @@
   "contributor":"Naili.M",
   "cs_approved": false,
   "cs_compatible": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "category": "Investigation",
   "icon_small_name": "Group_IB_Threat_Intelligence_small.png",
   "icon_large_name": "Group_IB_Threat_Intelligence_large.png",
-  "help_online": "https://github.com/fortinet-fortisoar/connector-group-ib-threat-intelligence-attribution-feed/blob/release/1.1.0/docs/GroupIb-TIA-Feed.md",
+  "help_online": "",
   "configuration": {
     "fields": [
       {
@@ -32,13 +32,13 @@
         "description": "Username used to access the Group IB server to which you will connect and perform the automated operations."
       },
       {
-        "title": "Password",
+        "title": "API Key",
         "required": true,
         "editable": true,
         "visible": true,
         "type": "password",
-        "name": "password",
-        "description": "Password used to access the Group IB server to which you will connect and perform the automated operations."
+        "name": "api_key",
+        "description": "API key used to access the Group IB server to which you will connect and perform the automated operations."
       },
       {
         "title": "Verify SSL",

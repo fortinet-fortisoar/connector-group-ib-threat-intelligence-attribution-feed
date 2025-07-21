@@ -1,5 +1,4 @@
-#### What's Improved
+#### What's Fixed
 
-- The indicator enrichment playbook Domain / IP / URL > GroupIB Threat Intelligence > Enrichment includes enriching file hashes, domains, IPs, and URLs, Emails via GroupIB Threat Intelligence. Optionally, it retrieves the indicator reputation and calculates the reputation summary from the Group IB Threat Intelligence.
-- Added the following new operations and playbooks:
-  - Search Indicator
+- The configuration parameter `password` has been replaced with `API Key` 
+- > The authentication method using username and password is deprecated and no longer supported.
