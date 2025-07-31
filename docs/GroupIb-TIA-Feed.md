@@ -2,17 +2,24 @@
 
 <p>Use Group-IB Threat Intelligence &amp; Attribution Feed integration to fetch IOCs from various Group-IB collections.</p>
 
-<p>This document provides information about the Group IB Threat Intelligence & Attribution Feed Connector, which facilitates automated interactions, with a Group IB Threat Intelligence & Attribution Feed server using FortiSOAR&trade; playbooks. Add the Group IB Threat Intelligence & Attribution Feed Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Group IB Threat Intelligence & Attribution Feed.</p>
+<p>This document provides information about the Group IB Threat Intelligence & Attribution Feed connector, which facilitates automated interactions, with a Group IB Threat Intelligence & Attribution Feed server using FortiSOAR&trade; playbooks. Add the Group IB Threat Intelligence & Attribution Feed connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Group IB Threat Intelligence & Attribution Feed.</p>
 
 <h3>Version information</h3>
 
-<p>Connector Version: 1.1.0</p>
+<p>Connector Version: 1.2.0</p>
 
-<p>Authored By: Fortinet CSE</p>
-
-Contributors: Naili.M
+<p>Authored By: Fortinet</p>
 
 <p>Certified: No</p>
+
+<h2>Release Notes for version 2.2.0</h2>
+- The configuration parameter `password` has been replaced with `API Key` 
+  q> The authentication method using username and password is deprecated and no longer supported.
+<p>Following enhancements have been made to the Securonix SNYPR connector in version 2.2.0:</p>
+
+<ul>
+<li>Added data ingestion support to ingest Securonix incidents as alerts in FortiSOAR.</li>
+</ul>
 
 <h2>Installing the connector</h2>
 
@@ -41,10 +48,10 @@ Contributors: Naili.M
 
 <p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Group IB Threat Intelligence & Attribution Feed</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations&nbsp;</strong> tab enter the required configuration details:&nbsp;</p>
 
-<table border=1><thead><tr><th>Parameter<br></th><th>Description<br></th></tr></thead><tbody><tr><td>Server URL<br></td><td>URL of the Group IB server to which you will connect and perform the automated operations.<br>
-<tr><td>Username<br></td><td>Username used to access the Group IB server to which you will connect and perform the automated operations.<br>
-<tr><td>Password<br></td><td>Password used to access the Group IB server to which you will connect and perform the automated operations.<br>
-<tr><td>Verify SSL<br></td><td>Specifies whether the SSL certificate for the server is to be verified or not. <br/>By default, this option is set as True.<br></td></tr>
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Server URL</td><td>URL of the Group IB server to which you will connect and perform the automated operations.</td></tr>
+<tr><td>Username</td><td>Username used to access the Group IB server to which you will connect and perform the automated operations.</td></tr>
+<tr><td>API Key</td><td>API key used to access the Group IB server to which you will connect and perform the automated operations.</td></tr>
+<tr><td>Verify SSL</td><td>Specifies whether the SSL certificate for the server is to be verified. <br/>By default, this option is selected, i.e., set to <code>true</code>.</td></tr>
 </tbody></table>
 
 <h2>Actions supported by the connector</h2>
